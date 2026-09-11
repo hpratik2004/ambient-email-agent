@@ -1,0 +1,8 @@
+{
+    "dependencies": ["."],
+    "graphs": {
+        "email_assistant": "./src/email_assistant/email_assistant.py:email_assistant"
+    },
+    "env": ".env",
+    "python_version": "3.11"
+}

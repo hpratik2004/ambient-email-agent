@@ -4,3 +4,5 @@ __pycache__/
 *.pyc
 graph.png
 *.egg-info/
+.langgraph_api/
+test_*.py

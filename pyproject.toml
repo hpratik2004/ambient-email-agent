@@ -12,6 +12,7 @@ dependencies = [
     "langsmith",
     "pydantic",
     "python-dotenv",
+    "colorama",
 ]
 
 [build-system]
