@@ -1,5 +1,5 @@
 from dotenv import load_dotenv
-from langchain_openrouter import ChatOpenRouter
+#from langchain_openrouter import ChatOpenRouter
 load_dotenv()
 
 from langchain.chat_models import init_chat_model

@@ -1,0 +1,22 @@
+[project]
+name = "ambient-email-agent"
+version = "0.1.0"
+description = "An AI email assistant built with LangGraph and LangChain"
+requires-python = ">=3.11"
+dependencies = [
+    "langchain>=1.0.0",
+    "langchain-core>=1.0.0",
+    "langchain-groq",
+    "langgraph>=1.0.0",
+    "langgraph-cli[inmem]",
+    "langsmith",
+    "pydantic",
+    "python-dotenv",
+]
+
+[build-system]
+requires = ["setuptools>=73.0.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
