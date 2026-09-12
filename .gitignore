@@ -5,4 +5,6 @@ __pycache__/
 graph.png
 *.egg-info/
 .langgraph_api/
-test_*.py
+/check_run.py
+/test_assistant.py
+/test_router.py

@@ -9,10 +9,11 @@ dependencies = [
     "langchain-groq",
     "langgraph>=1.0.0",
     "langgraph-cli[inmem]",
-    "langsmith",
+    "langsmith[pytest]",
     "pydantic",
     "python-dotenv",
     "colorama",
+    "pytest",
 ]
 
 [build-system]
