@@ -23,7 +23,7 @@ def format_email_markdown(subject: str, author: str, to: str, email_thread: str)
 ---
 """
 
-from typing import Any, List
+from typing import Any, List, Mapping
 
 
 def extract_tool_calls(messages: List[Any]) -> List[str]:
@@ -41,7 +41,7 @@ def format_messages_string(messages: List[Any]) -> str:
     """Flatten a list of messages into one string, for passing to an LLM judge."""
     return "\n".join(message.pretty_repr() for message in messages)
 
-def format_for_display(tool_call: dict) -> str:
+def format_for_display(tool_call: Mapping) -> str:
     """Render a proposed tool call as markdown for human review."""
     name = tool_call["name"]
     args = tool_call["args"]

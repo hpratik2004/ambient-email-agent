@@ -9,3 +9,4 @@ graph.png
 /test_assistant.py
 /test_router.py
 /check_hitl.py
+/check_memory.py

@@ -175,3 +175,38 @@ When handling emails, follow these steps:
 {cal_preferences}
 </ Calendar Preferences >
 """
+
+MEMORY_UPDATE_INSTRUCTIONS = """
+You maintain a user preference profile for an email assistant.
+
+You will be given the current profile and a piece of feedback the user gave while reviewing the assistant's work. Your job is to decide what the feedback implies about their preferences, and produce a revised profile.
+
+Rules for the revised profile:
+- Never discard existing preferences. Carry every one of them across unchanged unless the feedback directly contradicts it.
+- Only add a new preference, or correct one the feedback contradicts.
+- Keep the same plain-text style as the current profile: one preference per line, no headings, no markup, no tags.
+- Keep it short. Do not restate the same preference twice in different words.
+- Record only what the user wants, never how the assistant's tools work. Argument names, date formats, field structures and other API details are not preferences and must never appear in the profile.
+For example, if the current profile is:
+
+30 minute meetings are preferred.
+Marketing emails can be ignored.
+
+and the user shortens a proposed meeting from 60 minutes to 30, then the revised profile stays as it is, because that preference is already captured. If instead the user shortens a meeting to 15 minutes, the revised profile becomes:
+
+30 minute meetings are preferred, though 15 is acceptable for quick check-ins.
+Marketing emails can be ignored.
+
+The profile you are revising is the {namespace} profile. Its current contents are:
+
+{current_profile}
+"""
+
+MEMORY_UPDATE_REINFORCEMENT = """
+Remember:
+- NEVER overwrite the entire profile
+- ONLY make targeted additions of new information
+- ONLY update facts directly contradicted by the feedback
+- PRESERVE all other existing information
+- Output the profile as a single string
+"""
