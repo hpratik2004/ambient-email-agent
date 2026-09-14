@@ -10,3 +10,7 @@ graph.png
 /test_router.py
 /check_hitl.py
 /check_memory.py
+.secrets/
+/check_gmail.py
+/check_gmail_agent.py
+/check_ingest.py
