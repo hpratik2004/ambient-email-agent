@@ -1,16 +1,18 @@
 from typing import Dict, List
 from langchain_core.tools import BaseTool
 
-from email_assistant.tools.email_tools import write_email, Done
+from email_assistant.tools.email_tools import write_email, Done, Question
 from email_assistant.tools.calendar_tools import (
     schedule_meeting,
     check_calendar_availability,
 )
 
+
 ALL_TOOLS = {
     "write_email": write_email,
     "schedule_meeting": schedule_meeting,
     "check_calendar_availability": check_calendar_availability,
+    "Question": Question,
     "Done": Done,
 }
 

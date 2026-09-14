@@ -12,3 +12,8 @@ def write_email(to: str, subject: str, content: str) -> str:
 class Done(BaseModel):
     """Email has been sent."""
     done: bool
+
+@tool
+class Question(BaseModel):
+    """Ask the user a question."""
+    content: str
